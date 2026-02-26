@@ -43,7 +43,7 @@ export class AuthService {
     try {
       await this.emailService.sendConfirmationEmail(email, confirmationCode);
     } catch (e) {
-      await this.usersService.deleteById(toUserId(created));
+      await this.usersService.deleteById(toUserId(created));2
       throw new BadRequestException({ errorsMessages: [{ message: 'Registration failed', field: 'email' }] });
     }
   }
