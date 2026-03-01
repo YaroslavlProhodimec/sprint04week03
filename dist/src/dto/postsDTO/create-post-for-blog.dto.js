@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreatePostForBlogDto = void 0;
 const class_validator_1 = require("class-validator");
+const class_transformer_1 = require("class-transformer");
 class CreatePostForBlogDto {
     title;
     shortDescription;
@@ -19,16 +20,19 @@ class CreatePostForBlogDto {
 exports.CreatePostForBlogDto = CreatePostForBlogDto;
 __decorate([
     (0, class_validator_1.IsString)(),
+    (0, class_transformer_1.Transform)(({ value }) => (typeof value === 'string' ? value.trim() : value)),
     (0, class_validator_1.Length)(1, 30, { message: 'Incorrect title' }),
     __metadata("design:type", String)
 ], CreatePostForBlogDto.prototype, "title", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
+    (0, class_transformer_1.Transform)(({ value }) => (typeof value === 'string' ? value.trim() : value)),
     (0, class_validator_1.Length)(1, 100, { message: 'Incorrect shortDescription' }),
     __metadata("design:type", String)
 ], CreatePostForBlogDto.prototype, "shortDescription", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
+    (0, class_transformer_1.Transform)(({ value }) => (typeof value === 'string' ? value.trim() : value)),
     (0, class_validator_1.Length)(1, 1000, { message: 'Incorrect content' }),
     __metadata("design:type", String)
 ], CreatePostForBlogDto.prototype, "content", void 0);

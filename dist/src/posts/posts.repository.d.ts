@@ -1,6 +1,6 @@
 import { Model } from 'mongoose';
 import { PostDocument } from '../schemas/post.schema';
-import { CreatePostDto, UpdatePostDto } from '../types/post/input';
+import { CreatePostDto, UpdatePostDto } from '../dto/postsDTO/create-post.dto';
 import { OutputPostType } from '../types/post/output';
 import { BlogsRepository } from '../blogs/blogs.repository';
 import { PostLikesRepository } from '../post-likes/post-likes.repository';
