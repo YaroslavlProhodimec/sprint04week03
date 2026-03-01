@@ -4,7 +4,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Post, PostDocument } from '../schemas/post.schema';
 import { v4 as uuidv4 } from 'uuid';
-import { CreatePostDto, UpdatePostDto } from '../types/post/input';
+import { CreatePostDto, UpdatePostDto } from '../dto/postsDTO/create-post.dto';
 import { OutputPostType } from '../types/post/output';
 import { postMapper } from '../types/post/mapper';
 import { BlogsRepository } from '../blogs/blogs.repository';
